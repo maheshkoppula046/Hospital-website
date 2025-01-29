@@ -1,0 +1,51 @@
+
+{% extends 'base.html' %}
+{% block content %}
+<body >
+    <br>
+    <div class="container">
+        <form style="font-family: Arial, sans-serif; background: white; padding: 20px; border-radius: 10px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); width: 350px; margin: auto;" action="/register" method="POST">
+            <h2 style="text-align: center;">Register</h2>
+        
+            <div style="display: flex; flex-direction: column; margin-bottom: 10px;">
+                <label for="first_name" style="font-weight: bold; margin-bottom: 5px;">First Name:</label>
+                <input type="text" id="first_name" name="first_name" required style="padding: 8px; border: 1px solid #ccc; border-radius: 5px; width: 100%;">
+            </div>
+        
+            <div style="display: flex; flex-direction: column; margin-bottom: 10px;">
+                <label for="last_name" style="font-weight: bold; margin-bottom: 5px;">Last Name:</label>
+                <input type="text" id="last_name" name="last_name" required style="padding: 8px; border: 1px solid #ccc; border-radius: 5px; width: 100%;">
+            </div>
+        
+            <div style="display: flex; flex-direction: column; margin-bottom: 10px;">
+                <label for="email" style="font-weight: bold; margin-bottom: 5px;">Email:</label>
+                <input type="email" id="email" name="email" required style="padding: 8px; border: 1px solid #ccc; border-radius: 5px; width: 100%;">
+            </div>
+        
+            <div style="display: flex; flex-direction: column; margin-bottom: 10px;">
+                <label for="username" style="font-weight: bold; margin-bottom: 5px;">Username:</label>
+                <input type="text" id="username" name="username" required style="padding: 8px; border: 1px solid #ccc; border-radius: 5px; width: 100%;">
+            </div>
+        
+            <div style="display: flex; flex-direction: column; margin-bottom: 10px;">
+                <label for="password" style="font-weight: bold; margin-bottom: 5px;">Password:</label>
+                <input type="password" id="password" name="password" required style="padding: 8px; border: 1px solid #ccc; border-radius: 5px; width: 100%;">
+            </div>
+        
+            <div style="display: flex; flex-direction: column; margin-bottom: 10px;">
+                <label for="confirm_password" style="font-weight: bold; margin-bottom: 5px;">Confirm Password:</label>
+                <input type="password" id="confirm_password" name="confirm_password" required style="padding: 8px; border: 1px solid #ccc; border-radius: 5px; width: 100%;">
+            </div>
+        
+            <div style="display: flex; flex-direction: column; margin-bottom: 10px;">
+                <label for="mobile" style="font-weight: bold; margin-bottom: 5px;">Mobile Number:</label>
+                <input type="tel" id="mobile" name="mobile" required style="padding: 8px; border: 1px solid #ccc; border-radius: 5px; width: 100%;">
+            </div>
+        
+            <button type="submit" style="width: 100%; padding: 10px; background-color: #007bff; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 16px;">Register</button>
+        </form>
+        
+    </div>
+
+</body>
+{% endblock %}

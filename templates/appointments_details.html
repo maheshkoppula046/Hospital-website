@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% block content %}
+<body class="appointment-page">
+    <h1 class="page-title">Appointments</h1>
+    <table class="appointment-table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Mobile</th>
+                <th>Doctor</th>
+                <th>Date</th>
+                <th>Time</th>
+                <th>Problem Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for appointment in appointments %}
+            <tr>
+                <td>{{ appointment.id }}</td>
+                <td>{{ appointment.name }}</td>
+                <td>{{ appointment.email }}</td>
+                <td>{{ appointment.mobile }}</td>
+                <td>{{ appointment.doctor }}</td>
+                <td>{{ appointment.date }}</td>
+                <td>{{ appointment.time }}</td>
+                <td>{{ appointment.problem_description }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <h2>Cancel Appointment</h2>
+    <form action="delete_appointment" method="POST" class="cancel-form">
+        <div class="form-group">
+            <label for="appointment_id">Appointment ID:</label>
+            <input type="number" id="appointment_id" name="appointment_id" required>
+        </div>
+        <div class="form-group">
+            <label for="appointment_name">Name:        </label>
+            <input type="text" id="appointment_name" name="appointment_name" required>
+        </div>
+        <div class="form-group">
+            <button type="submit" class="cancel-button">Cancel Appointment</button>
+        </div>
+    </form>
+    
+</body>
+{% endblock %}
